@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Książki</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'hobby/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Moje Książki</h1>
+        <nav>
+            <a href="{% url 'home' %}">Strona główna</a> | 
+            <a href="{% url 'gatunki' %}">Gatunki</a> | 
+            <a href="{% url 'polecane' %}">Polecane</a> | 
+            <a href="{% url 'kontakt' %}">Kontakt</a>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+    
+    </footer>
+</body>
+</html>

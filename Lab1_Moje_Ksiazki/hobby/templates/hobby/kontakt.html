@@ -1,0 +1,11 @@
+{% extends "hobby/base.html" %}
+{% block title %}Kontakt — Między Stronami{% endblock %}
+{% block content %}
+<section class="contact">
+  <div class="contact-icon"></div><p class="eyebrow">POROZMAWIAJMY O KSIĄŻKACH</p>
+  <h1>Nadzieja jest zdradliwa</h1>
+  <p>{{ wiadomosc }}</p>
+  <a class="email" href="mailto:{{ email }}">{{ email }}</a>
+  <p class="note">32057@student.ajp.edu.pl</p>
+</section>
+{% endblock %}

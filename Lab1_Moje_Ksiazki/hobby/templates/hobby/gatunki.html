@@ -1,0 +1,10 @@
+{% extends "hobby/base.html" %}
+{% block title %}Gatunki — Między Stronami{% endblock %}
+{% block content %}
+<section class="page-intro"><p class="eyebrow">CO LUBISZ CZYTAĆ?</p><h1>Odkryj swój gatunek</h1><p></p></section>
+<section class="section genre-grid">
+  {% for gatunek in gatunki %}
+  <article class="genre-card"><div class="genre-icon">{{ gatunek.emoji }}</div><h2>{{ gatunek.nazwa }}</h2><p>{{ gatunek.opis }}</p></article>
+  {% endfor %}
+</section>
+{% endblock %}

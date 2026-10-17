@@ -1,0 +1,13 @@
+{% extends "hobby/base.html" %}
+{% block title %}Polecane — Między Stronami{% endblock %}
+{% block content %}
+<section class="page-intro"><p class="eyebrow">NASZE INSPIRACJE</p><h1>Książki warte uwagi</h1><p>Przykładowe tytuły, które pomogą Ci znaleźć kolejny czytelniczy klimat.</p></section>
+<section class="section recommendations">
+  {% for ksiazka in ksiazki %}
+  <article class="recommendation">
+    <div class="cover {{ ksiazka.kolor }}"><span></span><small>MIĘDZY STRONAMI</small></div>
+    <div class="recommendation-info"><p class="eyebrow">POLECAMY</p><h2>{{ ksiazka.tytul }}</h2><p class="author">{{ ksiazka.autor }}</p><p>{{ ksiazka.opis }}</p></div>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}
